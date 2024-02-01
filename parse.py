@@ -5,7 +5,7 @@ def main():
         user_in = sys.stdin.read()
         if user_in == '':
             exit()
-        print(user_in)
+        print(user_in.rstrip('\n'))
         result = mail_from_cmd(user_in)
         if (result == ''):
             print('Sender ok')
