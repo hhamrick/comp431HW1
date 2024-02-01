@@ -27,10 +27,6 @@ def mail_from_cmd(string):
     # expected string in form
     # “MAIL” <whitespace> “FROM:” <nullspace> <reverse-path> <nullspace> <CRLF>
     tokens = mail_from_cmd_tokenizer(string)
-    
-    # TODO remove
-    print(repr(string))
-    print(repr(tokens))
 
     # tokens should be in form:
     # [<whitespace>, <nullspace>, <reverse-path>, <nullspace>, <CRLF>]
