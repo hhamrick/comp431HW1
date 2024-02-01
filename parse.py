@@ -1,6 +1,10 @@
+import sys
+
 def main():
     while True:
-        user_in = input()
+        user_in = sys.stdin.read()
+        if user_in == '':
+            exit()
         print(user_in)
         result = mail_from_cmd(user_in)
         if (result == ''):
@@ -23,6 +27,10 @@ def mail_from_cmd(string):
     # expected string in form
     # “MAIL” <whitespace> “FROM:” <nullspace> <reverse-path> <nullspace> <CRLF>
     tokens = mail_from_cmd_tokenizer(string)
+    
+    # TODO remove
+    print(repr(string))
+    print(repr(tokens))
 
     # tokens should be in form:
     # [<whitespace>, <nullspace>, <reverse-path>, <nullspace>, <CRLF>]
