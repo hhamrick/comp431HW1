@@ -7,8 +7,6 @@ def main():
             print('Sender ok')
         else:
             print(result)
-    # STR = 'MAIL FROM: <jeffay@cs.unc.edu>\n'
-    # print(repr(STR))
 
 
 def parse(string):
