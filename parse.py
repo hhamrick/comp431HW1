@@ -28,7 +28,7 @@ def mail_from_cmd(string):
     # “MAIL” <whitespace> “FROM:” <nullspace> <reverse-path> <nullspace> <CRLF>
     tokens = mail_from_cmd_tokenizer(string)
 
-    print(repr(tokens))
+    # print(repr(tokens))
 
     # tokens should be in form:
     # [<whitespace>, <nullspace>, <reverse-path>, <nullspace>, <CRLF>]
